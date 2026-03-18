@@ -59,6 +59,26 @@ file.addEventListener("change", () => {
 
 ```
 
+##### Create URL for the photo (src)
+- create a `fileURL` variable 
+- Use the `URL.createObjectURL(file.files[0])`
+- Turn the preview button to Active (activate the preview button)
+
+```javascript
+file.addEventListener("change", () => {
+    //create a file url / src
+    const fileURL = URL.createObjectURL(file.files[0]);
+    //console.log(fileURL);
+    image.src = fileURL;
+    previewBTN.classList.remove("inactive");
+});
+
+```
+
+##### Open modal when preview button is clicked
+- Add event listener of click to the button
+- Toggle the display of model
+- Add another event listener to close the modal
 
 
 #### Modal in index.html
@@ -273,7 +293,11 @@ button{
 ```
 
 
+#### JavaScript code in app.js
 
+```javascript
+
+```
 
 
 

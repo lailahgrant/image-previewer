@@ -10,6 +10,21 @@ file.addEventListener("change", () => {
 
     //displays file name on the webpage
     fileName.innerHTML = file.files[0].name;
+
+    //create a file url / src
+    const fileURL = URL.createObjectURL(file.files[0]);
+    //console.log(fileURL);
+    image.src = fileURL;
+    previewBTN.classList.remove("inactive");
+});
+
+
+previewBTN.addEventListener("click", () => {
+    modal.classList.toggle("display-none");
+});
+
+closeBTN.addEventListener("click", () => {
+    modal.classList.toggle("display-none");
 });
 
 
