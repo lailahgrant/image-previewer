@@ -12,6 +12,12 @@
 - Preview image button is *`inactive`* by default : if no image is uploaded.
 - *image preview button is inactive by default till there's an uploaded image to preview*
 
+### JavaScript logic
+- Upload an image
+- Add the file name to the webpage
+- Activate the preview image button
+- Preview an image in the modal
+
 #### Modal in index.html
 
 ```html
@@ -98,6 +104,133 @@
 </body>
 </html>
 ```
+
+#### CSS3 code in style.css
+
+```css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
+/* MODAL */
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 600px;
+    height: 400px;
+    padding: 60px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.modal-content span{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.modal-content img{
+    display: block;
+    width: auto;
+    height: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.display-none{
+    display: none;
+}
+
+
+/* BUTTONS */
+.container{
+    display: flex;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button{
+    border: none;
+    margin-left: 14px;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: rgba(0,0, 139, 1);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 500ms ease-in-out all;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover{
+    background-color: rgba(0,0, 139, 0.7);
+    transform: scale(1.05);
+}
+
+.file, .file-preview{
+    display: flex;
+
+}
+
+.file input{
+    display: none;
+}
+
+.file-preview{
+    align-items: center;
+}
+
+.file-preview p{
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.inactive{
+    pointer-events: none;
+    background-color: rgba(120, 120, 120, 0.5);
+}
+
+.file-name{
+    margin-left: 4px;
+}
+
+```
+
+
+
 
 
 
