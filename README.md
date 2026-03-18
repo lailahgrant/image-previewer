@@ -13,10 +13,53 @@
 - *image preview button is inactive by default till there's an uploaded image to preview*
 
 ### JavaScript logic
+> Use DOM manipulation
 - Upload an image
 - Add the file name to the webpage
 - Activate the preview image button
 - Preview an image in the modal
+
+> Upload Photo - fires an `event` called **change**.
+> Use `addEventListener('change', ...)
+> ```javascript
+> file.addEventListener("change", () => {
+>    console.log(file);
+> });
+> ```
+
+> - To get more information on the uploaded file, use;
+> ```javascript
+> file.addEventListener("change", () => {
+>    console.log(file.files[0]); //get an array of only one uploaded image
+> });
+> ```
+>
+> - Use more information to get file name and display it on the webpage
+
+> ```javascript
+> //displays file name on the webpage
+> fileName.innerHTML = file.files[0].name;
+> ```
+
+
+#### JavaScript demo code 
+> Return all information on uploaded image file like filename and other metadata.
+
+``` javascript
+const file = document.querySelector("#file");
+const fileName = document.querySelector(".file-name");
+const image = document.querySelector(".photo-preview");
+const previewBTN = document.querySelector(".preview");
+const modal = document.querySelector(".modal");
+const closeBTN = document.querySelector(".close");
+
+file.addEventListener("change", () => {
+    console.log(file.files[0]);
+});
+
+```
+
+
 
 #### Modal in index.html
 
