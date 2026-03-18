@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
+/* MODAL */
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 600px;
+    height: 400px;
+    padding: 60px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.modal-content span{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.modal-content img{
+    display: block;
+    width: auto;
+    height: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.display-none{
+    display: none;
+}
+
+
+/* BUTTONS */
+.container{
+    display: flex;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: rgba(0,0, 139, 1);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 250ms ease-in-out all;
+}
+
+.file, .file-preview{
+    display: flex;
+
+}
+
+.file-preview{
+
+}
+
+
+
+
+
+
+
