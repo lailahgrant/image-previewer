@@ -1,5 +1,11 @@
 ## Image Previewer in plain HTML5, CSS3 and Vanilla JavaScript
 
+<div style="display:center">
+<img src="./image-previewer.png"  alt="Image Previewer webpage">
+<img src="./image-previewer-modal.png"  alt="Image Previewer modal">
+<img src="./image-previewer-filename.png"  alt="Image Previewer filename">
+</div>
+
 ### File Structure
 - index.html
 - style.css
@@ -81,7 +87,7 @@ file.addEventListener("change", () => {
 - Add another event listener to close the modal
 
 
-#### Modal in index.html
+#### Modal in `index.html`
 
 ```html
 <!-- MODAL FOR IMAGE PREVIEW -->
@@ -94,7 +100,7 @@ file.addEventListener("change", () => {
      </div>
 ```
 
-#### Buttons and Filename in index.html
+#### Buttons and Filename in `index.html`
 
 ```html
 <!-- UPLOAD, PREVIEW BUTTON AND FILENAME DISPLAY -->
@@ -123,7 +129,7 @@ file.addEventListener("change", () => {
 
 <hr>
 
-#### HTML5 code in index.html
+#### HTML5 code in `index.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -168,7 +174,7 @@ file.addEventListener("change", () => {
 </html>
 ```
 
-#### CSS3 code in style.css
+#### CSS3 code in `style.css`
 
 ```css
 *{
@@ -293,7 +299,7 @@ button{
 ```
 
 
-#### JavaScript code in app.js
+#### JavaScript code in `app.js`
 
 ```javascript
 const file = document.querySelector("#file");
